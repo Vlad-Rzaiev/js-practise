@@ -57,7 +57,8 @@ label {
   font-weight: 600;
   color: #333;
   display: block;
-  margin: 0 0 8px 20px;
+  width: 270px;
+  margin: 0 auto 8px;
 }
 
 select {
@@ -76,7 +77,8 @@ select {
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 12px;
-  margin: 0 0 8px 20px;
+  display: block;
+  margin: 0 auto;
 }
 
 select:hover {

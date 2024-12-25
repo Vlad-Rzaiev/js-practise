@@ -57,7 +57,9 @@ const getRamdomNumber = e => {
   messageError.style.display = 'none';
   messageSuccess.style.display = 'none';
   messageInfo.style.display = 'block';
-  messageInfo.textContent = 'Випадкове число згенеровано!';
+  messageInfo.textContent = `Випадкове число згенеровано в діапазоні від 0 до ${
+    level - 1
+  }!`;
   selectLevel.disabled = true;
 };
 
