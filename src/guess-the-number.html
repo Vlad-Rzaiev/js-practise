@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/guess-the-number.css" />
+  </head>
+  <body>
+    <a class="gb-link" href="./index.html">Go back</a>
+
+    <p class="descr">
+      Спробуйте вгадати число яке я звгадав за 10 спроб. Бажаю успіху!
+    </p>
+
+    <label for="difficulty">Виберіть рівень складності:</label>
+    <select id="difficulty" name="difficulty">
+      <option value="none"></option>
+      <option value="hard">Складний (0..500)</option>
+      <option value="medium">Середній (0..100)</option>
+      <option value="easy">Легкий (0..50)</option>
+    </select>
+
+    <h1 class="welcome-title">Hello Кукуруза!</h1>
+
+    <button class="generate-btn" type="button">
+      Згенерувати рандомне число
+    </button>
+
+    <form class="submit-form">
+      <span class="input-number-label">Введіть число від 0 до 50!</span>
+      <input class="input-number" type="number" name="number" disabled />
+      <button class="submit-btn" disabled>Перевірити</button>
+    </form>
+
+    <p class="message info" style="display: none">lorem</p>
+    <p class="message error" style="display: none">lorem</p>
+    <p class="message success" style="display: none">lorem</p>
+
+    <script type="module" src="./js/guess-the-number.js"></script>
+  </body>
+</html>
