@@ -18,12 +18,15 @@ selectLevel.addEventListener('change', e => {
   const userSelectLevel = e.target.value;
 
   if (userSelectLevel === 'easy') {
+    lavelTitle.style.display = 'block';
     lavelTitle.textContent = 'Введіть число від 0 до 50!';
     level = 51;
   } else if (userSelectLevel === 'medium') {
+    lavelTitle.style.display = 'block';
     lavelTitle.textContent = 'Введіть число від 0 до 100!';
     level = 101;
   } else if (userSelectLevel === 'hard') {
+    lavelTitle.style.display = 'block';
     lavelTitle.textContent = 'Введіть число від 0 до 500!';
     level = 501;
   }
