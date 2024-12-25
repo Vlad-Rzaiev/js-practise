@@ -13,20 +13,27 @@ let randomNumber;
 let userInputValue;
 let count = 0;
 let level;
+let userSelectLevel;
 
 selectLevel.addEventListener('change', e => {
-  const userSelectLevel = e.target.value;
+  userSelectLevel = e.target.value;
 
   if (userSelectLevel === 'easy') {
+    messageError.style.display = 'none';
     lavelTitle.style.display = 'block';
+    welcomeTitle.textContent = 'Hello Кукуруза!';
     lavelTitle.textContent = 'Введіть число від 0 до 50!';
     level = 51;
   } else if (userSelectLevel === 'medium') {
+    messageError.style.display = 'none';
     lavelTitle.style.display = 'block';
+    welcomeTitle.textContent = 'Hello Кукуруза!';
     lavelTitle.textContent = 'Введіть число від 0 до 100!';
     level = 101;
   } else if (userSelectLevel === 'hard') {
+    messageError.style.display = 'none';
     lavelTitle.style.display = 'block';
+    welcomeTitle.textContent = 'Hello Кукуруза!';
     lavelTitle.textContent = 'Введіть число від 0 до 500!';
     level = 501;
   }
@@ -61,6 +68,19 @@ const getRamdomNumber = e => {
     level - 1
   }!`;
   selectLevel.disabled = true;
+
+  if (userSelectLevel === undefined) {
+    messageError.style.display = 'block';
+    messageSuccess.style.display = 'none';
+    messageInfo.style.display = 'none';
+    messageError.textContent =
+      'Еееее, а рівень складності вибрати? Не тупи со старта 😱 !';
+
+    generateBtn.disabled = false;
+    userInputNumber.disabled = true;
+    submitBtn.disabled = true;
+    selectLevel.disabled = false;
+  }
 };
 
 const clickGuessNumber = e => {
