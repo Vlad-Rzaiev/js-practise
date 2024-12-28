@@ -21,20 +21,20 @@ selectLevel.addEventListener('change', e => {
   if (userSelectLevel === 'easy') {
     messageError.style.display = 'none';
     lavelTitle.style.display = 'block';
-    welcomeTitle.textContent = 'Hello Кукуруза!';
-    lavelTitle.textContent = 'Введіть число від 0 до 50!';
+    welcomeTitle.textContent = 'Hello Player!';
+    lavelTitle.textContent = 'Enter a number from 0 to 50!';
     level = 51;
   } else if (userSelectLevel === 'medium') {
     messageError.style.display = 'none';
     lavelTitle.style.display = 'block';
-    welcomeTitle.textContent = 'Hello Кукуруза!';
-    lavelTitle.textContent = 'Введіть число від 0 до 100!';
+    welcomeTitle.textContent = 'Hello Player!';
+    lavelTitle.textContent = 'Enter a number from 0 to 100!';
     level = 101;
   } else if (userSelectLevel === 'hard') {
     messageError.style.display = 'none';
     lavelTitle.style.display = 'block';
-    welcomeTitle.textContent = 'Hello Кукуруза!';
-    lavelTitle.textContent = 'Введіть число від 0 до 500!';
+    welcomeTitle.textContent = 'Hello Player!';
+    lavelTitle.textContent = 'Enter a number from 0 to 500!';
     level = 501;
   }
 });
@@ -59,12 +59,12 @@ const getRamdomNumber = e => {
   userInputNumber.disabled = false;
   submitBtn.disabled = false;
 
-  welcomeTitle.textContent = 'Hello Кукуруза!';
+  welcomeTitle.textContent = 'Hello Player!';
 
   messageError.style.display = 'none';
   messageSuccess.style.display = 'none';
   messageInfo.style.display = 'block';
-  messageInfo.textContent = `Випадкове число згенеровано в діапазоні від 0 до ${
+  messageInfo.textContent = `The random number is generated in the range from 0 to ${
     level - 1
   }!`;
   selectLevel.disabled = true;
@@ -74,7 +74,7 @@ const getRamdomNumber = e => {
     messageSuccess.style.display = 'none';
     messageInfo.style.display = 'none';
     messageError.textContent =
-      'Еееее, а рівень складності вибрати? Не тупи со старта 😱 !';
+      `Haaalo, and what level of difficulty should I choose? 😱 !`;
 
     generateBtn.disabled = false;
     userInputNumber.disabled = true;
@@ -94,7 +94,7 @@ const clickGuessNumber = e => {
     messageSuccess.style.display = 'none';
     messageInfo.style.display = 'none';
     messageError.textContent =
-      'Гру завершено. Вам не вдалося відгадати число за 10 спроб. Ви конкретна кукуруза 😔';
+      `The game is over. You failed to guess the number in 10 attempts. You are a definite loser 😔. But don't give up and try again, you will definitely succeed!`;
 
     welcomeTitle.textContent = 'Luuuuzeeer!';
     generateBtn.disabled = false;
@@ -113,7 +113,7 @@ const clickGuessNumber = e => {
     messageError.style.display = 'none';
     messageSuccess.style.display = 'none';
     messageInfo.style.display = 'block';
-    messageInfo.textContent = 'Спробуйте більше ⬆️';
+    messageInfo.textContent = 'Try more ⬆️';
   } else if (
     userInputValue > randomNumber &&
     userInputValue >= 0 &&
@@ -122,7 +122,7 @@ const clickGuessNumber = e => {
     messageError.style.display = 'none';
     messageSuccess.style.display = 'none';
     messageInfo.style.display = 'block';
-    messageInfo.textContent = 'Спробуйте менше ⬇️';
+    messageInfo.textContent = 'Try less ⬇️';
   } else if (
     userInputValue === randomNumber &&
     userInputValue >= 0 &&
@@ -131,11 +131,11 @@ const clickGuessNumber = e => {
     messageError.style.display = 'none';
     messageSuccess.style.display = 'block';
     messageInfo.style.display = 'none';
-    messageSuccess.textContent = `Вітаємо, Ви вгадали число за ${count} ${getAttemptWord(
+    messageSuccess.textContent = `Congratulations, you guessed the number in ${count} ${getAttemptWord(
       count
-    )} і довели що Ви не кукуруза! 💪`;
+    )} and proved that you are not a loser! 💪`;
 
-    welcomeTitle.textContent = 'Вітаннячко Чемпіоне!';
+    welcomeTitle.textContent = 'Congratulations Champion!';
 
     generateBtn.disabled = false;
     userInputNumber.disabled = true;
@@ -146,7 +146,7 @@ const clickGuessNumber = e => {
     messageError.style.display = 'block';
     messageSuccess.style.display = 'none';
     messageInfo.style.display = 'none';
-    messageError.textContent = `Альо, кукуруза чи шо! Написано ж від 0 до ${
+    messageError.textContent = `Haaalo! It's written from 0 to ${
       level - 1
     }!🤦‍♂️`;
   }
