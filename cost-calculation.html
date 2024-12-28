@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/js-practise/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cost calculation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script type="module" crossorigin src="/js-practise/cost-calculation.js"></script>
+    <link rel="modulepreload" crossorigin href="/js-practise/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="stylesheet" crossorigin href="/js-practise/assets/cost-calculation-D6oN-BwQ.css">
+  </head>
+  <body>
+    <a class="gb-link" href="./index.html">Go back</a>
+
+    <form class="budget-form">
+      <label class="budget-label" for="budget">Enter you budget:</label>
+      <input class="budget-input" type="number" id="budget" name="budget" />
+      <button class="budget-submit-btn" type="submit">Submit</button>
+    </form>
+
+    <p class="your-budget" style="display: none">budget</p>
+
+    <form class="costs-form">
+      <h2 class="costs-descr">Costs</h2>
+      <label class="costs-label" for="costs-title"><title></title></label>
+      <input
+        class="costs-title"
+        type="text"
+        id="costs-title"
+        name="title"
+        autofocus
+      />
+
+      <label class="costs-label" for="costs-price">Price</label>
+      <input class="costs-price" type="number" id="costs-price" name="price" />
+
+      <button class="costs-submit-btn" type="submit">Save</button>
+    </form>
+
+    <table class="costs-table">
+      <tr class="costs-table-row">
+        <th class="costs-table-title">Product title</th>
+        <th class="costs-table-title">Price</th>
+      </tr>
+    </table>
+
+  </body>
+</html>
