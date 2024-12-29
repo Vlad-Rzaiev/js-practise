@@ -12,7 +12,7 @@ let minutesInput;
 let secondsInput;
 let submitBtn;
 const alarm = new Audio(
-  'https://github.com/Vlad-Rzaiev/js-practise/blob/main/src/sounds/clock-ticking.mp3'
+  'https://res.cloudinary.com/dquehaxrj/video/upload/v1735482053/675681__nightcustard__smiths-dash-mounted-car-clock-1930s-ticks_sntf79.mp3'
 );
 
 const calculateTotalSeconds = (days, hours, minutes, seconds) => {
