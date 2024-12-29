@@ -11,7 +11,7 @@ let hoursInput;
 let minutesInput;
 let secondsInput;
 let submitBtn;
-const alarm = new Audio('../sounds/clock-ticking.mp3');
+const alarm = new Audio('/sounds/clock-ticking.mp3');
 
 const calculateTotalSeconds = (days, hours, minutes, seconds) => {
   return days * 86400 + hours * 3600 + minutes * 60 + seconds;
@@ -64,11 +64,9 @@ const onClickSubmitBtn = e => {
   clearInterval(countDown);
   progressTimer.style.animation = 'none';
 
-  setTimeout(() => {
-    progressTimer.style.animation = `reduce-width ${
-      totalSeconds + 1
-    }s linear forwards`;
-  }, 0);
+  progressTimer.style.animation = `reduce-width ${
+    totalSeconds + 1
+  }s linear forwards`;
 
   countDown = setInterval(() => {
     timer.textContent = showTime(totalSeconds);
