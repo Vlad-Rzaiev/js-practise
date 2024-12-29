@@ -27,24 +27,61 @@
 
     <div class="container">
       <form class="timer-form">
-        <label class="timer-label" for="input-user-time"
-          >Enter your time in seconds</label
-        >
-        <input
-          class="timer-input"
-          id="input-user-time"
-          type="number"
-          name="userTime"
-          min="1"
-        />
+        <div class="inputs-wrap">
+          <div class="time-wrap">
+            <label class="timer-label" for="input-days">Days</label>
+            <input
+              class="timer-input"
+              id="input-days"
+              type="number"
+              name="days"
+              min="0"
+            />
+          </div>
+          <div class="time-wrap">
+            <label class="timer-label" for="input-hours">Hours</label>
+            <input
+              class="timer-input"
+              id="input-hours"
+              type="number"
+              name="hours"
+              min="0"
+              max="23"
+            />
+          </div>
+          <div class="time-wrap">
+            <label class="timer-label" for="input-minutes">Minutes</label>
+            <input
+              class="timer-input"
+              id="input-minutes"
+              type="number"
+              name="minutes"
+              min="0"
+              max="59"
+            />
+          </div>
+          <div class="time-wrap">
+            <label class="timer-label" for="input-seconds">Seconds</label>
+            <input
+              class="timer-input"
+              id="input-seconds"
+              type="number"
+              name="seconds"
+              min="0"
+              max="59"
+            />
+          </div>
+        </div>
         <span class="message" style="display: none">#</span>
+
         <div class="btn-wrap">
           <button class="timer-btn" type="submit">Start</button>
           <button class="reset-btn" type="button">Reset</button>
+          <button class="mute-btn" type="button" disabled>Mute</button>
         </div>
       </form>
 
-      <h2 class="timer">00:00</h2>
+      <h2 class="timer">00:00:00:00</h2>
       <div class="timer-wrapper">
         <div class="timer-progress"></div>
       </div>

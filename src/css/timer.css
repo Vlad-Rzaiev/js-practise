@@ -52,23 +52,28 @@ a {
   margin-bottom: 50px;
 }
 
+.inputs-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
 .timer-label {
   text-align: center;
   font-size: 18px;
   font-weight: 600;
   color: #333;
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .timer-input {
-  width: 100%;
+  width: 80px;
   padding: 10px;
   border: 2px solid #ccc;
   border-radius: 5px;
   outline: none;
   display: block;
-  margin-bottom: 16px;
   transition: border-color 250ms linear, box-shadow 250ms linear;
 }
 
@@ -107,7 +112,7 @@ a {
 .timer-btn {
   font-weight: bold;
   color: white;
-  background-color: #007bff;
+  background-color: #00b37f;
   border: none;
   padding: 12px 24px;
   border-radius: 5px;
@@ -121,13 +126,13 @@ a {
 
 .timer-btn:hover,
 .timer-btn:focus {
-  background-color: #0056b3;
+  background-color: #009966;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   outline: none;
 }
 
 .timer-btn:active {
-  background-color: #003f7f;
+  background-color: #007f4d;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transform: scale(0.98);
 }
@@ -183,6 +188,44 @@ a {
 }
 
 .reset-btn:disabled:hover {
+  box-shadow: none;
+}
+
+.mute-btn {
+  font-weight: bold;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 250ms linear, box-shadow 250ms linear,
+    outline 250ms linear, transform 250ms linear, color 250ms linear,
+    opacity 250ms linear;
+  display: block;
+  margin: 0 auto;
+}
+
+.mute-btn:hover,
+.mute-btn:focus {
+  background-color: #0056b3;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.mute-btn:active {
+  background-color: #003f7f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(0.98);
+}
+
+.mute-btn:disabled {
+  background-color: #e4e2e2;
+  color: #a1a1a1;
+  cursor: not-allowed;
+}
+
+.mute-btn:disabled:hover {
   box-shadow: none;
 }
 
