@@ -11,7 +11,9 @@ let hoursInput;
 let minutesInput;
 let secondsInput;
 let submitBtn;
-const alarm = new Audio('/src/sounds/clock-ticking.mp3');
+const alarm = new Audio(
+  'https://github.com/Vlad-Rzaiev/js-practise/blob/main/src/sounds/clock-ticking.mp3'
+);
 
 const calculateTotalSeconds = (days, hours, minutes, seconds) => {
   return days * 86400 + hours * 3600 + minutes * 60 + seconds;
