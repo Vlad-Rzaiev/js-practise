@@ -30,11 +30,9 @@
         <button class="budget-submit-btn" type="submit">Submit</button>
       </form>
 
-      <p class="your-budget" style="display: none">budget</p>
-
       <form class="costs-form">
         <h2 class="costs-descr">Costs</h2>
-        <label class="costs-label" for="costs-title"><title></title></label>
+        <label class="costs-label" for="costs-title">Product name</label>
         <input
           class="costs-title"
           type="text"
@@ -48,22 +46,30 @@
           type="number"
           id="costs-price"
           name="price"
+          step="0.01"
+          min="0.01"
         />
-        <span class="message your-budget" style="display: none">#</span>
-        <button class="costs-submit-btn" type="submit">Save</button>
+        <span class="message" style="display: none">#</span>
+        <button class="costs-submit-btn" type="submit">Add</button>
       </form>
+
+      <p class="your-budget" style="display: none">budget</p>
+
       <table class="costs-table">
         <tr class="costs-table-row">
-          <th class="costs-table-title">Product title</th>
+          <th class="costs-table-title border-right">Product title</th>
           <th class="costs-table-title">Price</th>
         </tr>
       </table>
-      <table class="costs-table">
-        <tr class="costs-table-row">
-          <th class="costs-table-title">Total price</th>
-          <th class="costs-table-title total-price">0</th>
+
+      <table class="total-table">
+        <tr class="total-table-row">
+          <th class="total-table-title border-right">Total price</th>
+          <th class="total-table-title total-price">0</th>
         </tr>
       </table>
+
+      <button class="remove-list-btn" type="button">Clear list</button>
     </div>
 
     <script type="module" src="./js/cost-calculation.js"></script>

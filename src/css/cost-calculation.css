@@ -111,7 +111,8 @@ a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.your-budget {
+.your-budget,
+.message {
   width: 100%;
   font-size: 20px;
   font-weight: bold;
@@ -169,7 +170,8 @@ a {
   box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
 }
 
-.costs-table {
+.costs-table,
+.total-table {
   width: 100%;
   max-width: 400px;
   border-collapse: collapse;
@@ -178,22 +180,47 @@ a {
 }
 
 .costs-table th,
-.costs-table td {
+.costs-table td,
+.total-table th,
+.total-table td {
   padding: 12px 15px;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
-.costs-table-title {
+.costs-table-title,
+.total-table-title {
   background-color: #4caf50;
   color: white;
   font-weight: bold;
 }
 
-.costs-table tr:nth-child(even) {
+.border-right {
+  border-right: 1px solid #ccc;
+}
+
+.costs-table-row:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-.costs-table tr:hover {
-  background-color: #ddd;
+.remove-list-btn {
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 250ms linear, transform 250ms linear;
+  display: block;
+  margin: 0 auto 50px;
+}
+
+.remove-list-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+}
+
+.remove-list-btn:active {
+  background-color: #a93226;
+  transform: scale(0.95);
 }
