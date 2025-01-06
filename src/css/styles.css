@@ -12,6 +12,13 @@ a {
   cursor: pointer;
 }
 
+ul,
+ol {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
 .container {
   position: absolute;
   top: 50%;
@@ -23,7 +30,11 @@ a {
   padding: 24px;
 }
 
-.page-link {
+.menu-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.menu-link {
   font-weight: 500;
   font-size: 18px;
   background-color: #86fa01;
@@ -33,11 +44,7 @@ a {
   transition: background-color 250ms linear;
 }
 
-.page-link:not(:last-child) {
-  margin-bottom: 24px;
-}
-
-.page-link:hover,
-.page-link:focus {
+.menu-link:hover,
+.menu-link:focus {
   background-color: #86fa01b0;
 }
