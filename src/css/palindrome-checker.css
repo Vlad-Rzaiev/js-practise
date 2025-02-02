@@ -1,7 +1,17 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #232323;
-  color: #eceff1;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+main {
+  width: 100%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
 h2 {
@@ -41,11 +51,85 @@ a {
   background-color: #86fa01b0;
 }
 
-.container {
-  text-align: center;
-  width: 100%;
-  max-width: 500px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin: 0 auto;
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.palindrome-form-wrapper {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.palindrome-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.palindrome-form-label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.palindrome-form-user-input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.palindrome-form-user-input:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.palindrome-form-submit-btn {
+  background-color: #4caf50;
+  color: white;
+  font-size: 18px;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.palindrome-form-submit-btn:hover,
+.palindrome-form-submit-btn:focus {
+  background-color: #45a049;
+}
+
+.result {
+  display: none;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.info-text-container {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e0f7fa;
+  border-left: 5px solid #00796b;
+  border-radius: 5px;
+}
+
+.info-text,
+.result-text {
+  font-size: 18px;
+  color: #00796b;
+  margin: 0;
 }

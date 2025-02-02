@@ -25,9 +25,41 @@
   <body>
     <a class="gb-link" href="../index.html">Go back</a>
 
-    <div class="container">
-      <h1 class="main-title">Palindrome Checker</h1>
-      <p>Hi! This is a simple form to check if it is a palindrome</p>
+    <div class="main-wrapper">
+      <main>
+        <h1 class="main-title">Is it a Palindrome?</h1>
+
+        <div class="palindrome-form-wrapper">
+          <form class="palindrome-form palindrome-form-js">
+            <label class="palindrome-form-label" for="text-input"
+              >Enter in text to check for a palindrome:</label
+            >
+            <input
+              class="palindrome-form-user-input palindrome-form-user-input-js"
+              type="text"
+              id="text-input"
+              name="text-input"
+            />
+
+            <button
+              class="palindrome-form-submit-btn"
+              type="submit"
+              id="check-btn"
+            >
+              Check
+            </button>
+          </form>
+          <div class="result" id="result">
+            <p class="result-text"></p>
+          </div>
+        </div>
+        <div class="info-text-container">
+          <p class="info-text">
+            A palindrome is a word or sentence that's spelled the same way both
+            forward and backward, ignoring punctuation, case, and spacing.
+          </p>
+        </div>
+      </main>
     </div>
   </body>
 </html>
