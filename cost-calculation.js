@@ -1,0 +1,12 @@
+import"./assets/modulepreload-polyfill-B5Qt9EMX.js";const g=document.querySelector(".budget-form"),s=document.querySelector(".your-budget"),b=document.querySelector(".costs-form"),u=document.querySelector(".costs-table"),c=document.querySelector(".total-price"),l=document.querySelector(".message"),p=document.querySelector(".remove-list-btn");let o,n=0;document.addEventListener("DOMContentLoaded",()=>{localStorage.getItem("userBudget")!==null&&(o=Number(localStorage.getItem("userBudget")),s.style.display="block",s.textContent=`Your budget is ${o} $.`);const r=d().map(e=>`
+        <tr class="costs-table-row user-row">
+          <td class="costs-table-text border-right">${e.name}</td>
+          <td class="costs-table-text">${e.price}</td>
+        </tr>
+    `).join("");u.insertAdjacentHTML("beforeend",r),c.textContent=`${m()}`});const d=()=>JSON.parse(localStorage.getItem("user-products"))||[],m=()=>parseFloat(localStorage.getItem("total-price"))||0,S=t=>{t.preventDefault(),o=Number(t.target.elements.budget.value),localStorage.setItem("userBudget",o),s.style.display="block",s.textContent=`Your budget is ${o} $`,t.target.reset()},y=t=>{t.preventDefault(),l.style.display="none";const r=t.target.elements.title.value.trim(),e=Number(t.target.elements.price.value);if(console.log(e),!r||isNaN(e)||e<=0){l.style.display="block",l.textContent="Please enter valid product name and price!";return}n=parseFloat((e+m()).toFixed(2)),c.textContent=`${n}`,localStorage.setItem("total-price",String(n));const a=d();a.push({name:r,price:e}),localStorage.setItem("user-products",JSON.stringify(a)),o=parseFloat((o-e).toFixed(2)),localStorage.setItem("userBudget",o),s.textContent=`Your budget is ${o} $.`,l.style.display="block",l.textContent=`Product ${r} has added to list`;const i=`
+    <tr class="costs-table-row user-row">
+      <td class="costs-table-text border-right">${r}</td>
+      <td class="costs-table-text">${e}</td>
+    </tr>
+  `;u.insertAdjacentHTML("beforeend",i),t.target.elements.title.focus(),o<0&&(s.textContent="Over budget! You've spent all your money."),t.target.reset()},v=()=>{const t=document.querySelectorAll(".user-row");localStorage.removeItem("user-products"),localStorage.removeItem("total-price"),t.forEach(r=>r.remove()),c.textContent="0"};g.addEventListener("submit",S);b.addEventListener("submit",y);p.addEventListener("click",v);
+//# sourceMappingURL=cost-calculation.js.map
